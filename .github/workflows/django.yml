@@ -34,7 +34,7 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     permissions:
-      contents: write  # Grants permission to push to the repository
+      contents: write  
     steps:
       - uses: actions/checkout@v4
 
@@ -51,7 +51,7 @@ jobs:
       - name: Generate Static Files
         run: |
           python manage.py collectstatic --noinput
-          python manage.py distill-local dist/
+          python manage.py distill-local --force dist/
 
 
       - name: Deploy to GitHub Pages
