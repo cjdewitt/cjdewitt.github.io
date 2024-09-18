@@ -51,7 +51,8 @@ jobs:
       - name: Generate Static Files
         run: |
           python manage.py collectstatic --noinput
-          python manage.py distill-local --collectstatic
+          python manage.py distill-local dist/
+
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
