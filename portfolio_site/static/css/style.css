@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #333;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+}
+
+.left-column {
+    width: 50%;
+    padding: 20px;
+}
+
+.right-column {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.chatbot-section, .game-section {
+    height: 50%;
+    padding: 20px;
+}
