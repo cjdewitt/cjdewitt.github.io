@@ -27,7 +27,6 @@ jobs:
         pip install -r requirements.txt
     - name: Run Tests
       run: |
-        cd portfolio_site
         python manage.py test
 
   deploy:
