@@ -1,19 +1,53 @@
 {% extends 'portfolio/base.html' %}
+{% load static %}
 
 {% block title %}Home - Software Engineer Portfolio{% endblock %}
 
-{% block left_column %}
-    <h1>Welcome to My Portfolio</h1>
-    <p>I'm a Software Engineer specializing in Python and Django.</p>
-    <!-- Add more content about yourself -->
-{% endblock %}
+{% block content %}
+    <nav>
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'page1' %}">Page 1</a></li>
+            <li><a href="{% url 'page2' %}">Page 2</a></li>
+        </ul>
+    </nav>
 
-{% block chatbot %}
-    <h2>Chatbot</h2>
-    <!-- Add your chatbot implementation here -->
-{% endblock %}
+    <div class="container">
+        <div class="left-column">
+            <h1>Welcome to My Portfolio</h1>
+            <p>I'm Cory DeWitt, a Software Engineer specializing in Python and Django.</p>
 
-{% block game %}
-    <h2>Game</h2>
-    <!-- Add your game implementation here -->
+            <h2>Experience</h2>
+
+            <h3>Software Engineering Intern at Google LLC</h3>
+            <p>Developed frameworks to enhance AI programming capabilities, contributing to significant improvements in code generation.</p>
+
+            <h3>Undergraduate Researcher at USC STEEL Lab</h3>
+            <p>Conducted research on enhancing cyberattack resilience in IoT devices and published a paper in Sensors S&P '23.</p>
+
+            <h2>Projects</h2>
+
+            <h3>Research-GPT</h3>
+            <p>An academic research assistant powered by GPT-3.5, streamlining literature reviews and knowledge discovery.</p>
+
+            <h3>Duel Doodle Jump</h3>
+            <p>Developed a multiplayer web application of the popular game Doodle Jump, focusing on game functionality and physics.</p>
+
+            <h3>NBA Data Analysis</h3>
+            <p>Engineered a web app to explore NBA player statistics and forecast season stats using machine learning.</p>
+
+            <h3>HackTech23 - Uniswap</h3>
+            <p>Created a full-stack web app for a localized marketplace promoting sustainability among college students.</p>
+        </div>
+        <div class="right-column">
+            <div class="chatbot-section">
+                <h2>Chatbot</h2>
+                <!-- Add your chatbot implementation here -->
+            </div>
+            <div class="game-section">
+                <h2>Game</h2>
+                <!-- Add your game implementation here -->
+            </div>
+        </div>
+    </div>
 {% endblock %}
