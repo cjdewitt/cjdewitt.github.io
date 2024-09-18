@@ -16,14 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from . import views
-from django_distill import distill_path
-
-def get_index():
-    return None
+from portfolio imprt views
 
 urlpatterns = [
-    distill_path('', views.index, name='index', distill_func=get_index),
-    distill_path('projects/', views.projects, name='projects', distill_func=get_index),
-    distill_path('about/', views.about, name='about', distill_func=get_index),
+    path('admin/', admin.site.urls),
+    path('', views.index, name='index'),
+    path('about/', views.about, name='about'),
+    path('projects/', views.projects, name='projects'),
 ]
