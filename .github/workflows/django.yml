@@ -1,4 +1,4 @@
-name: Deploy Django Site to GitHub Pages
+name: Django CI/CD
 
 on:
   push:
