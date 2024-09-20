@@ -8,20 +8,20 @@ def get_index():
 urlpatterns = [
     distill_path(
         '',  
-        views.home,
-        name='home',
+        views.index,
+        name='index',
         distill_func=get_index,
     ),
     distill_path(
-        'page1/',
-        views.page1,
-        name='page1',
+        '',
+        views.about,
+        name='about',
         distill_func=get_index,
     ),
     distill_path(
-        'page2/',
-        views.page2,
-        name='page2',
+        '',
+        views.projects,
+        name='projects',
         distill_func=get_index,
     ),
 ]
